@@ -1,5 +1,5 @@
 # GENERATED FILE — do not edit.
-# Rendered for v0.1.6 by scripts/bump-tap-formula.mjs in the Hearsai source repo and
+# Rendered for v0.1.7 by scripts/bump-tap-formula.mjs in the Hearsai source repo and
 # pushed here by its release workflow. Hand edits are lost on the next release.
 # typed: false
 # frozen_string_literal: true
@@ -22,27 +22,27 @@
 class Hearsai < Formula
   desc "Relay daemon that lets Claude Code instances on different machines work together"
   homepage "https://hearsai.net"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     on_arm do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-darwin-arm64"
-      sha256 "b88d6bb1d6204468aae957ce8c6042b1d049a59ebca349ba15cc2f25794df740"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-darwin-arm64"
+      sha256 "c359c655fc0a5d4f13911f20bafb23b0af0d6654a35163c736014bf389d31632"
     end
     on_intel do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-darwin-x64"
-      sha256 "11bf5aafbd527a2828322eeaaa44ccf6717038031f5fb257179ec1096872a82e"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-darwin-x64"
+      sha256 "fc3c31b45fa8a50bb2941b91b819f7dfc5f2df16ba90b25c406ae1d96ea637aa"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-linux-arm64"
-      sha256 "5a2dcf468b21467d975496d1bd9d5870d93a4c4b0be9264b0e8988a6ee05f514"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-linux-arm64"
+      sha256 "a4aee0de0502120cb9d3db68f66e405e0fd97c13ee297627099c8742d8f05ef6"
     end
     on_intel do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-linux-x64"
-      sha256 "fa91adbdd82eff5945e6931ef6d5ad40385de8feeb762649be731cd680a6aa4d"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-linux-x64"
+      sha256 "278ea54b47def50a40752964c3893cd1155695caec98d1bba555ac6c118f9ef4"
     end
   end
 
@@ -75,6 +75,19 @@ class Hearsai < Formula
       Updates: run `brew upgrade hearsai`. A running daemon notices the new version within a
       minute and restarts itself onto it — nothing else to do. (Homebrew installs deliberately
       opt out of the daemon's own self-updater, so the package manager stays in charge.)
+
+      Uninstalling — run these two IN THIS ORDER:
+
+          hearsai uninstall --full
+          brew uninstall hearsai
+
+      The first stops the daemon and removes the Hearsai tools from Claude Code and this
+      device's saved login; the second removes the binary, which is Homebrew's to delete.
+      Running `brew uninstall` on its own leaves a background service and a Claude Code entry
+      pointing at a binary that no longer exists.
+
+      To stop this machine accepting invites without removing anything else, use plain
+      `hearsai uninstall` — it keeps the Hearsai tools working in your own Claude Code sessions.
     EOS
   end
 
