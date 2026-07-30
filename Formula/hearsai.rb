@@ -1,5 +1,5 @@
 # GENERATED FILE — do not edit.
-# Rendered for v0.1.5 by scripts/bump-tap-formula.mjs in the Hearsai source repo and
+# Rendered for v0.1.6 by scripts/bump-tap-formula.mjs in the Hearsai source repo and
 # pushed here by its release workflow. Hand edits are lost on the next release.
 # typed: false
 # frozen_string_literal: true
@@ -22,27 +22,27 @@
 class Hearsai < Formula
   desc "Relay daemon that lets Claude Code instances on different machines work together"
   homepage "https://hearsai.net"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
     on_arm do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.5/hearsai-darwin-arm64"
-      sha256 "9f6fe40811c6c4436d918f7fd80209458fe878dd56c41f2c1c844b2d9c455e96"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-darwin-arm64"
+      sha256 "b88d6bb1d6204468aae957ce8c6042b1d049a59ebca349ba15cc2f25794df740"
     end
     on_intel do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.5/hearsai-darwin-x64"
-      sha256 "cb267e004715be1700326860f11d9684a6b563dac2c33bc1cb1d0f94f4c11cef"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-darwin-x64"
+      sha256 "11bf5aafbd527a2828322eeaaa44ccf6717038031f5fb257179ec1096872a82e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.5/hearsai-linux-arm64"
-      sha256 "e1dc10dbcb784760743ba747234575eafdf33f37ad8789ba3e7e15351d9fc0f9"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-linux-arm64"
+      sha256 "5a2dcf468b21467d975496d1bd9d5870d93a4c4b0be9264b0e8988a6ee05f514"
     end
     on_intel do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.5/hearsai-linux-x64"
-      sha256 "0170e538c376c06646258eaa9af28ba740fd951e56b71c4ec61a5125c59b16bd"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.6/hearsai-linux-x64"
+      sha256 "fa91adbdd82eff5945e6931ef6d5ad40385de8feeb762649be731cd680a6aa4d"
     end
   end
 
@@ -58,8 +58,15 @@ class Hearsai < Formula
 
           hearsai setup <label>          # e.g. hearsai setup macbook
 
+      It signs you in (that login IS this device's identity), asks which directory invited
+      sessions should work in, and installs the daemon. It connects to hearsai.net — there is
+      nothing to configure. If your account already has a device, a human approves this one on
+      the dashboard first; setup tells you where and waits for it.
+
       Claude Code must already be installed and logged in on this machine; Hearsai runs it
       under your own subscription and never sees your Anthropic credentials.
+
+      Then check the whole path any time with `hearsai status`.
 
       On a headless box (no browser here), use the device-code flow:
 
