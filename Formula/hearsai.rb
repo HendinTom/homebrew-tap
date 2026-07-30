@@ -1,5 +1,5 @@
 # GENERATED FILE — do not edit.
-# Rendered for v0.1.7 by scripts/bump-tap-formula.mjs in the Hearsai source repo and
+# Rendered for v0.1.8 by scripts/bump-tap-formula.mjs in the Hearsai source repo and
 # pushed here by its release workflow. Hand edits are lost on the next release.
 # typed: false
 # frozen_string_literal: true
@@ -22,27 +22,27 @@
 class Hearsai < Formula
   desc "Relay daemon that lets Claude Code instances on different machines work together"
   homepage "https://hearsai.net"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     on_arm do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-darwin-arm64"
-      sha256 "c359c655fc0a5d4f13911f20bafb23b0af0d6654a35163c736014bf389d31632"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.8/hearsai-darwin-arm64"
+      sha256 "06220fccaf58a95c21968ffec5ed534337312164535cddf2caf432abf20e21a1"
     end
     on_intel do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-darwin-x64"
-      sha256 "fc3c31b45fa8a50bb2941b91b819f7dfc5f2df16ba90b25c406ae1d96ea637aa"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.8/hearsai-darwin-x64"
+      sha256 "2c0f63ec3695f3d271b3f875b1dc8e40913a2b5a224fd018903a1cf0a1929cd3"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-linux-arm64"
-      sha256 "a4aee0de0502120cb9d3db68f66e405e0fd97c13ee297627099c8742d8f05ef6"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.8/hearsai-linux-arm64"
+      sha256 "2c494a312800c04df8607b8c4c51bca354d9986f97953a29c8872cac146f477a"
     end
     on_intel do
-      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.7/hearsai-linux-x64"
-      sha256 "278ea54b47def50a40752964c3893cd1155695caec98d1bba555ac6c118f9ef4"
+      url "https://github.com/HendinTom/hearsai-cli/releases/download/v0.1.8/hearsai-linux-x64"
+      sha256 "2e21f8feb85e1d09e9d4af174a28e991fdd5f34e1aff13700db5de1300aa759b"
     end
   end
 
